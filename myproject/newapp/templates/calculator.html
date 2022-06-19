@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,47 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <style>
-        .container{
-            background-color: black;
-            width: 300px;
-            height: 450px;
-            margin-left: 10px;
-            margin-top: 50px;
-            border-radius: 20px;
-
-        }
-        input[type=text]{
-            font-weight: bolder;
-            font-size: 40px;
-            color: black;
-            margin-top: 20px;
-            margin-left: 20px;
-            width: 250px;
-            height: 50px;
-        }
-        input[type=button]{
-            width: 40px;
-            height: 40px;
-            margin-left: 25px;
-            background-color: grey;
-            color: white;
-            font-weight: bolder;
-            font-size: x-large; 
-        }
-        input[type=button]:hover{
-            background-color: dodgerblue;
-        }
-         
-        p{
-            color: white;
-            font-size: 20px;
-            font-weight: bolder;
-            padding-top: 20px;
-            padding-left: 20px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="{% static 'css/calculator.css' %}">
 </head>
 <body>
     <div class="container">
@@ -68,19 +29,23 @@
             <input type="button" value="0" onclick="btn(value)">
             <input type="button" value="=" onclick="result()">
             <input type="button" value="/" onclick="btn(value)" style="background-color:blue"><br><br>
-        <script>
-            var display=document.getElementById('display');
-            function btn(value){ 
-                display.value += value; //multiple value print avan vendi anne += use cheyyunathe
-            }
-            function clear(){
-                display.value=" ";  
-            }
-            function result(){
-                var result = eval(display.value); //nammal enter cheyytha text field values evaluate cheyyan vendi ane eval use cheyyunathe
-                display.value = result; //evaluate cheyytha value ne vendum result lek add cheyyunnu
-            }
-        </script>
     </div>
+
+    <script>
+        var display=document.getElementById('display');
+
+        function btn(value){ 
+            display.value += value; //multiple value print avan vendi anne += use cheyyunathe
+        }
+
+        function clear(){
+            display.value=" ";  
+        }
+
+        function result(){
+            var result = eval(display.value); //nammal enter cheyytha text field values evaluate cheyyan vendi ane eval use cheyyunathe
+            display.value = result; //evaluate cheyytha value ne vendum result lek add cheyyunnu
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+.container{
+    background-color: black;
+    width: 300px;
+    height: 450px;
+    margin-left: 10px;
+    margin-top: 50px;
+    border-radius: 20px;
+
+}
+input[type=text]{
+    font-weight: bolder;
+    font-size: 40px;
+    color: black;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 250px;
+    height: 50px;
+}
+input[type=button]{
+    width: 40px;
+    height: 40px;
+    margin-left: 25px;
+    background-color: grey;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large; 
+}
+input[type=button]:hover{
+    background-color: dodgerblue;
+}
+ 
+p{
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 20px;
+    padding-left: 20px;
+}
